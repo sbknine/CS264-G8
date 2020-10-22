@@ -21,7 +21,15 @@ app.listen(PORT, function () {
 
 app.get('/api', function (req, res) {
     const queryParams = req.query;
+    if(queryParams['user'] == "thanakrit" && queryParams['pwd'] == "1234"){
+        res.send('Success');
+    }else{
+        res.send('Failed');
+    }
+
     console.log('param[1]:' + queryParams['user']);
+    console.log('param[2]:' + queryParams['pwd']);
+    
     res.send(queryParams);
 });
 
