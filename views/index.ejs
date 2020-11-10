@@ -68,11 +68,61 @@ input {
 
 <body>
   <Link rel="stylesheet" href="style.css">
-  <form class="container",form action="/api">
+  <form class="container",form action="/menu/">
       <h2>Log in</h2>
       <input class="textbox" type="text" id="user" name="user" placeholder="Username">
       <input class="textbox" type="password" id="pwd" name="pwd" placeholder="Password">
       <input class="btn-submit" type="submit" value="Login">
   </form>
+   <script>
+      async function postData(url = "", data = {}) {
+        const response = await fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: data, // body data type must match "Content-Type" header
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+      }
+     
+      const form = document.getElementById( "login-form" );
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        var formBody = [];
+        var un = $('#user').val();
+        var pw = $('#pwd').val();
+        
+        formBody.push(encodeURIComponent("user") + '=' + encodeURIComponent(un));
+        formBody.push(encodeURIComponent("pwd") + '=' + encodeURIComponent(pw));
+        formBody = formBody.join("&").replace( /%20/g, '+' );
+        console.log(formBody);
+        postData('http://localhost:5000/api', formBody)
+        .then( data => {
+          console.log(data);
+          if (data.status) {
+            window.location = '/menu/' + un;
+            return true;
+          } else {
+            // var se = $('#showerror')
+            document.getElementById("showerror").style.display = "block";
+            return false;
+          }
+        })
+        .catch((error) =>{
+          console.log(error);
+          return false;
+        });
+
+        return false;
+      });
+    </script>
+  </body>
 </body>
 </html>
