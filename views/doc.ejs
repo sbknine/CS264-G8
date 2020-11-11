@@ -10,14 +10,41 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <style> 
+  .menubar {
+    width: 100%;
+    height: 162px;
+    background: url(https://cdn.discordapp.com/attachments/707118055687192626/776043017739829248/Head_264.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 10px #6666;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.menubar .logo {
+    float: left;
+}
+.menubar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 10px;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background: url(https://cdn.discordapp.com/attachments/686248509543809217/776109655587029002/Untitled.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    justify-content: center;
+    padding-bottom: 100%;
+}
     select {
       width: 6%;
       padding: 2px 2px;
     }
-    div{
-        margin-left: 5%;
-    }
-    header{
+    h3{
         font-weight: bold;
         font-size: 56px;
     }
@@ -49,14 +76,61 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
+    }
+    .container ul.menu {
+    list-style: none;
+    float: left;
+}
+.container ul.menu li {
+    float: left;
+    margin-right: 20px;
+}
+.container ul.menu li a {
+    text-decoration: none;
+    color: #333333;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.container ul.menu li a:hover {
+    border-bottom: 2px solid #17395C;
+    padding-bottom: 0;
 }
     </style>
     
 </head>
+    
+<body>
+    
 <div>
-้<header>เอกสารคำร้อง</header><br><br>
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <!-- <h1>Thammasat  University</h1> -->
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <ul class="menu">
+                <li>
+                    <a href="/menu">Home</a>
+                </li>
+                <li>
+                    <a href="/doc">ยื่นคำร้อง</a>
+                </li>
+                <li>
+                    <a href="#">สถานะคำร้อง</a>
+                </li>
+                <li>
+                    <a href="/">ออกจากระบบ</a>
+                </li>
+            </ul>
+        </div>
+    </header><br><br><br>
+<h3 class="container">เอกสารคำร้อง</h3><br><br>
 
-<form>
+<form class="container" form action="/next">
     <label for="object">เรื่อง </label>
     <input type="text" id="object" name="object"><br>
     <label for="sendto">เรียน </label>
@@ -107,7 +181,9 @@
     <input class="textbox" type="text" id="other" name="other"><br><br>
 
     <h1>เหตุผลที่ยื่นคำร้องเนื่องจาก</h1><br>
-    <textarea name="message" style="width:40%; height:150px;"></textarea><br><br><br>
-    <button class="button button">Next</button> 
+    <textarea name="message" style="width:40%; height:150px;"></textarea><br>
+    <button class="button button">Next</button>
 </form>
-</div>  
+</div>
+</body>  
+</html>
