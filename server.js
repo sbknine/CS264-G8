@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views')); //standard of node.js
 app.set('view engine', 'ejs'); //standard of node.js
 
 app.get('/', function (req, res) {
-    res.render('index', {fname: 'Songsakdi', lName: 'Rongviri'});
+    res.render('index');
 });
 
 app.listen(PORT, function () {
@@ -147,6 +147,12 @@ const getStudentInfo = (username) => {
 };
 app.get('/menu', function (req, res) {
     res.render('menu')
+});
+app.get('/doc', function (req, res) {
+    res.render('doc')
+});
+app.get('/next', function (req, res) {
+    res.render('next')
 });
 
 
