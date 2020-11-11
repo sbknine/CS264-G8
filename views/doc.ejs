@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ยื่นคำร้อง</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style> 
+    select {
+      width: 6%;
+      padding: 2px 2px;
+    }
+    div{
+        margin-left: 5%;
+    }
+    header{
+        font-weight: bold;
+        font-size: 56px;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    p{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .smallbox{
+        width: 4%;
+    }
+    .numbox{
+        width: 3%;
+    }
+    .textbox{
+        width: 40%;
+    }
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+    </style>
+    
+</head>
+<div>
+้<header>เอกสารคำร้อง</header><br><br>
+
+<form>
+    <label for="object">เรื่อง </label>
+    <input type="text" id="object" name="object"><br>
+    <label for="sendto">เรียน </label>
+    <input type="text" id="sendto" name="sendto"><br><br><br>
+    <label>ข้าพเข้า</label>
+    <select id="gender" name="gender">
+        <option value="male">นาย</option>
+        <option value="female">นางสาว</option>
+        <option value="female2">นาง</option>
+    </select>
+    <input type="text" id="fname" name="fname"> 
+    <input type="text" id="lname" name="lname">
+    <label for="stuentid">เลขทะเบียน</label>
+    <input type="text" id="stuentid" name="stuentid"> 
+    <label for="years">ชั้นปีที่</label>
+    <input class="smallbox" type="text" id="years" name="years"><br>
+    <label for="faculty">สาขาวิชา</label>
+    <input type="text" id="faculty" name="faculty">
+    <label for="address">ที่อยู่ที่ติดต่อได้เลขที่</label>
+    <input type="text" id="address" name="address">
+    <label for="address">แขวง/ตำบล</label>
+    <input type="text" id="address" name="address"><br>
+    <label for="address">เขต/อำเภอ</label>
+    <input type="text" id="address" name="address">
+    <label for="contry">จังหวัด</label>
+    <input type="text" id="contry" name="contry">
+    <label for="number">โทรศัพท์ติดต่อนักศึกษา</label>
+    <input type="text" id="number" name="number"><br>
+    <label for="number">โทรศัพท์ติดต่อผู้ปกครอง</label>
+    <input type="text" id="number" name="number">
+    <label for="teacher">อาจารย์ที่ปรึกษา</label>
+    <input type="text" id="teacher" name="teacher"><br><br>
+
+    <h1>ประสงค์ยื่นคำร้องเรื่อง</h1><br>
+        <input type="checkbox" id="late" name="late">
+        <label for="late"> <p>จดทะเบียนล่าช้า/เพิ่มล่าช้า</p></label> 
+    <label for="semester">ภาคการศึกษาที่</label>
+    <input class="numbox" type="text" id="semester" name="semester"> /
+    <input class="numbox" type="text" id="term" name="term"><br>
+    <label for="subid">รหัสวิชา</label>
+    <input type="text" id="subid" name="subid">
+    <label for="subname">ชื่อวิชา</label>
+    <input type="text" id="subname" name="subname">
+    <label for="section">section</label>
+    <input type="text" id="section" name="section"><br>
+    <input type="checkbox" id="other" name="other">
+    <label for="other"> <p>อื่นๆ</p></label> (โปรดระบุ)<br>
+    <input class="textbox" type="text" id="other" name="other"><br><br>
+
+    <h1>เหตุผลที่ยื่นคำร้องเนื่องจาก</h1><br>
+    <textarea name="message" style="width:40%; height:150px;"></textarea><br><br><br>
+    <button class="button button">Next</button> 
+</form>
+</div>  

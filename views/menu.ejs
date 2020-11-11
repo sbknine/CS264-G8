@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootstrap Example</title>
+  <title>Welcome</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,42 +10,148 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style>
-    body{
-        background-image: url(https://www.sdperspectives.com/wp-content/uploads/2019/03/SD-Perspectives-Thammasat-for-people-Sustainability.png);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center; 
-        background-size: 100% 100%;
-        }
-    .button {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 16px 64px;
-        cursor: pointer;
-    }
-    .button3 {padding: 14px 80px;}
-    .disable{
-        opacity: 0.6;
-        cursor: not-allowed;
-    }
-    div{
-        margin-top: 15%;
-    }
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+ /* แถบบน */
+.menubar {
+    width: 100%;
+    height: 162px;
+    background: url(https://cdn.discordapp.com/attachments/707118055687192626/776043017739829248/Head_264.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 10px #6666;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.menubar .logo {
+    float: left;
+}
+.menubar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 10px;
+}
+.container ul.menu {
+    list-style: none;
+    float: left;
+}
+.container ul.menu li {
+    float: left;
+    margin-right: 20px;
+}
+.container ul.menu li a {
+    text-decoration: none;
+    color: #333333;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.container ul.menu li a:hover {
+    border-bottom: 2px solid #17395C;
+    padding-bottom: 0;
+}
+.header {
+    width: 100%;
+    /* ใส่แบ้คกราวเป็นรูป
+    background: url(../img/bar.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center center;*/
+    background: #17395C;
+}
+.header_area {
+    width: 660px;
+    margin: 0 auto;
+    text-align: center;
+    color: #efb758;
+}
+.header_area h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+    font-weight: normal;
+}
+.info1_area {
+    width: 100% cover;
+    height: 500px;
+    background: #E1DCC9;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 100% 100%;
+}
 </style>
 </head>
-<div>
-    <form  ,form action="/doc/">
-    <button class="button button3">Test1</button><br>   
-    </form>
-    <button class="button button3">Test1</button><br>
-    <button class="button button3">Test1</button><br>
-    <button class="button disable button3">Test1</button>
-</div>
+<body>
 
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+                <!-- <h1>Thammasat  University</h1> -->
+            </div>
+        </div>
+    </div>
 
+    <header class="header">
+        <div class="container">
+            <ul class="menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="/doc/">ยื่นคำร้อง</a>
+                </li>
+                <li>
+                    <a href="#">สถานะคำร้อง</a>
+                </li>
+                <li>
+                    <a href="#">ออกจากระบบ</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="info1">
+        <div class="container">
+            <div class="info1_area">
+                <!-- <img src="img/tu1.png" alt=""> -->
+                <div class="info1_text">
+                    <!-- <h1>University</h1> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact_area">
+                <h1>Information about</h1>
+                <form>
+                    <label>99 Moo 18 Paholyothin Road,<br>
+                        Klong Nueng, Klong Luang,<br>
+                         Pathumthani 12121 <br>
+                         Thailand.</label><br>
+                    <!-- <input type="text" placeholder="Your Name"><br>
+                    <label>Your Email</label><br>
+                    <input type="email" placeholder="Your Email"><br>
+                    <label>Subject</label><br>
+                    <input type="text" placeholder="Your Subject"><br>
+                    <label>Your Message</label><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea><br>
+                    <button>send</button><br> -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2020 | YourName</p>
+    </footer>
+    
+</body>
 </html>
