@@ -79,7 +79,7 @@ body {
 .info1_area {
     width: 100% cover;
     height: 500px;
-    background-image: linear-gradient(150deg,#efb758,#b33939);
+    background-image: linear-gradient(150deg#FFD13F,#C3002F9);
 }
 
 .contact h1 {
