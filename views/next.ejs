@@ -107,13 +107,24 @@
                     <a href="#">สถานะคำร้อง</a>
                 </li>
                 <li>
-                    <a href="/">ออกจากระบบ</a>
+                    <a href="/" onclick="logoutFunction()">ออกจากระบบ</a>
                 </li>
             </ul>
             
         </div>
         
     </header>
+    <script>
+        function logoutFunction() {
+          var txt;
+          if (confirm("Press a button!")) {
+            txt = "You pressed OK!";
+          } else {
+            txt = "You pressed Cancel!";
+          }
+          document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
     
     <section class="info1">
         <div class="container">
@@ -132,11 +143,17 @@
                 <p>คณะ <input type = "text" name = "faculty" size = "20" maxlength = "10" required>
                 สาขา <input type = "text" name = "branch" size = "20" maxlength = "10" required> </p>
                 <p>เอกสารรับรอง(เหตุผลที่ลงทะเบียนล่าช้า) <label>Browse</label><input type = "file" id = "img" accept ="image/*" required ></p>
-                <button type ="submit" >บันทึก</button>   <a href="/doc"><button type = "submit">ยกเลิก</button></a>
+                <a href="/menu"><button type ="submit" onclick="myFunction()" >บันทึก</button></a>   <a href="/doc"><button type = "submit">ยกเลิก</button></a>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        function myFunction() {
+          alert("บันทึกคำร้องลงทะเบียนล่าช้าเรียบร้อยเเล้ว");
+        }
+    </script>
 
     <section class="contact">
         <div class="container">

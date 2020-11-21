@@ -117,18 +117,30 @@ body {
                     <a href="/menu">Home</a>
                 </li>
                 <li>
-                    <a href="/doc">ยื่นคำร้อง</a>
+                    <a href="/condition">ยื่นคำร้อง</a>
                 </li>
                 <li>
                     <a href="#">สถานะคำร้อง</a>
                 </li>
                 <li>
-                    <a href="/">ออกจากระบบ</a>
+                    <a href="/" onclick="myFunction()">ออกจากระบบ</a>
                 </li>
             </ul>
         </div>
     </header><br><br><br>
 <h3 class="container">เอกสารคำร้อง</h3><br><br>
+
+<script>
+    function myFunction() {
+      var txt;
+      if (confirm("Press a button!")) {
+        txt = "You pressed OK!";
+      } else {
+        txt = "You pressed Cancel!";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+</script>
 
 <form class="container" form action="/next">
     <label for="object">เรื่อง </label>
