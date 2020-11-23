@@ -135,14 +135,15 @@ ul.menu li a {
                     <a href="#">สถานะคำร้อง</a>
                 </li>
                 <li>
-                    <a href="/" onclick="logout()">ออกจากระบบ</a>
+                    <a href="/" onclick="return confirm('ต้องการออกจากระบบใช่หรือไม่?');">ออกจากระบบ</a>
                 </li>
                 <li>
-                    <a href="/" onclick="return confirm('ต้องการออกจากระบบใช่หรือไม่?');">ออกจากระบบ</a>
+                    <a href="/approve">อนุมัติคำร้อง(สำหรับอาจารย์)</a>
                 </li>
             </ul>
         </div>
     </header>
+
     
     <section class="info1">
         <div class="container">
