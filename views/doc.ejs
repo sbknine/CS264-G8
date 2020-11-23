@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>ยื่นคำร้อง</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <style> 
-  .menubar {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style_form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+ /* แถบบน */
+.menubar {
     width: 100%;
-    height: 162px;
-    background: url(https://cdn.discordapp.com/attachments/707118055687192626/776043017739829248/Head_264.jpg) no-repeat;
+    height: 163px;
+    background: url(https://media.discordapp.net/attachments/778995764193919026/778995965927096340/bar4.jpg) no-repeat;
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     box-shadow: 0 0 10px #6666;
 }
 .container {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 .menubar .logo {
@@ -31,85 +35,109 @@
     font-weight: normal;
     padding: 10px;
 }
-body {
-    height: 100vh;
+.container .menu {
     width: 100%;
-    background: url(https://cdn.discordapp.com/attachments/686248509543809217/776109655587029002/Untitled.jpg) no-repeat;
-    background-position: center center;
-    background-size: cover;
-    justify-content: center;
-    padding-bottom: 100%;
+    height: 45px;
+    /* background :#17395C; */
+    background :#E1DCC9;
+    box-shadow: 0 0 10px #6666;
+    margin: 0 auto;
+    text-align: center;
 }
-    select {
-      width: 6%;
-      padding: 2px 2px;
-    }
-    h3{
-        font-weight: bold;
-        font-size: 56px;
-    }
-    h1{
-        font-weight: bold;
-        font-size: 18px;
-    }
-    p{
-        font-weight: bold;
-        font-size: 16px;
-    }
-    .smallbox{
-        width: 4%;
-    }
-    .numbox{
-        width: 3%;
-    }
-    .textbox{
-        width: 40%;
-    }
-    .button {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    .container ul.menu {
+.container ul.menu {
     list-style: none;
     float: left;
 }
 .container ul.menu li {
+    padding: 10px;
     float: left;
     margin-right: 20px;
 }
 .container ul.menu li a {
     text-decoration: none;
-    color: #333333;
+    color: #070707;
     border-bottom: 2px solid transparent;
     padding-bottom: 20px;
     transition: all 0.3s ease;
 }
 .container ul.menu li a:hover {
-    border-bottom: 2px solid #17395C;
+    border-bottom: 2px solid #b33939;
     padding-bottom: 0;
 }
-    </style>
-    
-</head>
-    
+.header {
+    width: 100%;
+}
+.header_area {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    color: #efb758;
+}
+.header_area h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+    font-weight: normal;
+}
+.info1_text p {
+    margin: 30px;
+    padding: 30px;
+    /* text-align: center; */
+    font-size: 10px;
+    font-weight: normal;
+}
+.info1_area {
+    width: 100% cover;
+    height: 900px;
+    background-image: linear-gradient(150deg,#FFD13F,#C3002F);
+}
+.container p1 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.container h {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.contact h1 {
+    margin: 20px;
+}
+.contact p {
+    margin: 20px;
+}
+.contact footer {
+    width: 100% cover;
+    height: 30px;
+    background: #666666;
+    text-align: center;
+    padding: 15px;
+}
+.container .info1_text h3 {
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 1000px;
+    height: 800px;
+    background-color: #E1DCC9;
+    border: 2px solid #070707;
+    font-size: 20px;
+    font-weight: Thin;
+}
+
+
+</style>
 <body>
-    
-<div>
+
     <div class="menubar">
         <div class="container">
             <div class="logo">
-                <!-- <h1>Thammasat  University</h1> -->
+                <!-- ชื่อข้างไอค่อน
+                <h1>ชื่อ</h1> -->
             </div>
         </div>
     </div>
+
     <header class="header">
         <div class="container">
             <ul class="menu">
@@ -120,27 +148,37 @@ body {
                     <a href="/condition">ยื่นคำร้อง</a>
                 </li>
                 <li>
+                    <a href="#">ชำระเงิน</a>
+                </li>
+                <li>
                     <a href="#">สถานะคำร้อง</a>
                 </li>
                 <li>
-                    <a href="/" onclick="myFunction()">ออกจากระบบ</a>
+                    <a href="/" onclick="logout()">ออกจากระบบ</a>
+                </li>
+                <li>
+                    <a href="/approve">อนุมัติคำร้อง(สำหรับอาจารย์)</a>
                 </li>
             </ul>
         </div>
-    </header><br><br><br>
-<h3 class="container">เอกสารคำร้อง</h3><br><br>
+    </header>
 
-<script>
-    function myFunction() {
-      var txt;
-      if (confirm("ต้องการออกจากระบบใช่หรือไม่")) {
-        txt = "You pressed OK!";
-      } else {
-        txt = "You pressed Cancel!";
-      }
-      document.getElementById("demo").innerHTML = txt;
-    }
-</script>
+    <script>
+        function logout() {
+          var txt;
+          if (confirm("ต้องการออกจากระบบใช่หรือไม่")) {
+            txt = "You pressed OK!";
+          } else {
+            txt = "You pressed Cancel!";
+          }
+          document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+    <section class="info1">
+        <div class="container">
+            <div class="info1_area">
+                <div class="info1_text">
+                    <h3 class="container">เอกสารคำร้อง<br><br>
 
 <form class="container" form action="/next">
     <label for="object">เรื่อง </label>
@@ -176,9 +214,9 @@ body {
     <label for="teacher">อาจารย์ที่ปรึกษา</label>
     <input type="text" id="teacher" name="teacher"><br><br>
 
-    <h1>ประสงค์ยื่นคำร้องเรื่อง</h1><br>
+    <p1>ประสงค์ยื่นคำร้องเรื่อง</p1><br>
         <input type="checkbox" id="late" name="late">
-        <label for="late"> <p>จดทะเบียนล่าช้า/เพิ่มล่าช้า</p></label> 
+        <label for="late"> <h>จดทะเบียนล่าช้า/เพิ่มล่าช้า</h></label> 
     <label for="semester">ภาคการศึกษาที่</label>
     <input class="numbox" type="text" id="semester" name="semester"> /
     <input class="numbox" type="text" id="term" name="term"><br>
@@ -189,13 +227,33 @@ body {
     <label for="section">section</label>
     <input type="text" id="section" name="section"><br>
     <input type="checkbox" id="other" name="other">
-    <label for="other"> <p>อื่นๆ</p></label> (โปรดระบุ)<br>
+    <label for="other"> <h>อื่นๆ</h></label> (โปรดระบุ)<br>
     <input class="textbox" type="text" id="other" name="other"><br><br>
 
-    <h1>เหตุผลที่ยื่นคำร้องเนื่องจาก</h1><br>
+    <p1>เหตุผลที่ยื่นคำร้องเนื่องจาก</p1><br>
     <textarea name="message" style="width:40%; height:150px;"></textarea><br>
     <button class="button button">Next</button>
-</form>
-</div>
-</body>  
-</html>
+                </div>
+            </div>
+        </div>
+    </h3>
+    </section>
+
+
+    <div class="contact">
+        <h1>Information about</h1>
+        <p>99 Moo 18 Paholyothin Road,<br>
+             Klong Nueng, Klong Luang,<br>
+             Pathumthani 12121,<br> 
+             Thailand.<br><br>
+             Tel. +66 (0) 2613 3333,<br>
+             0-2221-6171-80, 0-2221-6111-20<br></p>
+        <footer>
+            <p>Copyright &copy; 2020 | Group_8</p>
+        </footer>
+    </div>
+
+
+
+</body>
+</html> 
