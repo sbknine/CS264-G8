@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style_welcome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+ /* แถบบน */
+.menubar {
+    width: 100%;
+    height: 163px;
+    background: url(https://media.discordapp.net/attachments/778995764193919026/778995965927096340/bar4.jpg) no-repeat;
+    background-size: cover;
+    /* background-position: center center; */
+    box-shadow: 0 0 10px #6666;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.menubar .logo {
+    float: left;
+}
+.menubar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 10px;
+}
+.menu {
+    width: 100%;
+    height: 45px;
+    /* background :#17395C; */
+    background :#E1DCC9;
+    box-shadow: 0 0 10px #6666;
+    margin: 0 auto;
+    text-align: center;
+}
+ul.menu {
+    list-style: none;
+    float: left;
+}
+ul.menu li {
+    padding: 10px;
+    float: left;
+    margin-right: 20px;
+}
+ul.menu li a {
+    text-decoration: none;
+    color: #070707;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+ ul.menu li a:hover {
+    border-bottom: 2px solid #b33939;
+    padding-bottom: 0;
+}
+.header {
+    width: 100%;
+}
+.header_area {
+    width: 660px;
+    margin: 0 auto;
+    text-align: center;
+    color: #efb758;
+}
+.header_area h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+    font-weight: normal;
+}
+.info1_text p {
+    margin: 30px;
+    padding: 30px;
+    /* text-align: center; */
+    font-size: 20px;
+    font-weight: normal;
+}
+.info1_area {
+    width: 100% cover;
+    height: 500px;
+    background-image: linear-gradient(150deg,#FFD13F,#C3002F);
+}
+
+.contact h1 {
+    margin: 20px;
+}
+.contact p {
+    margin: 20px;
+}
+.contact footer {
+    width: 100% cover;
+    height: 30px;
+    background: #666666;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+<body>
+
+    <div class="menubar">
+        <div class="container">
+            <div class="logo">
+           
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-12">
+ <header class="header">
+
+            <ul class="menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">ยื่นคำร้อง</a>
+                </li>
+                <li>
+                    <a href="#">ชำระเงิน</a>
+                </li>
+                <li>
+                    <a href="#">สถานะคำร้อง</a>
+                </li>
+                <li>
+                    <a href="#">ออกจากระบบ</a>
+                </li>
+            </ul>
+     
+    </header>
+        </div>
+        
+    </div>
+
+    <div class="row justify-content-start">
+        <div class="col-12">
+            <div class="info1_area">
+                <div class="row" style="padding-top: 100px;padding-left: 50px;">
+                    <div class="col-4">
+                        <a href="#" style="color:#000; text-decoration: none;"> ย้อนกลับ</a> <br>
+                        <a href="#" style="color:#000; text-decoration: none;"> ตรวจสอบสถานะ</a> <br>
+                    </div>
+                    <div class="col-8">
+                   <h2> การอนุมัติคำร้องจากคณบดี</h2>
+                    ชื่อ - นามสกุล(ไทย) :<br>
+                    เลขรหัสนักศึกษา :<br>
+                    ระดับ :<br>
+                    คณะ :<br>
+                    ภาษาวิชา :<br>
+                    โครงการหลักสูตร :<br>
+
+                   
+                      <!-- /*เอกสารประกอบคำร้อง Browse  <input type="file" id="myfile" name="myfile" multiple><br><br>*/ -->
+                        อนุมัติการลงทะเบียนล่าช้าหรือไม่<br>
+                      <button type="submit" onclick="myFunction()">อนุมัติ</button> 
+                      <button type="button" onclick="nutFunction()">ไม่อนุมัติ</button>
+                   
+                       
+                  
+            
+
+
+                </div>
+                </div>
+
+                <div class="row"  style="padding-left: 50px;">
+                    <div class="col-4">
+                        <a href="#" style="color:#000; text-decoration: none;"> Log Out</a> <br>
+                       
+                </div>
+                </div>
+               
+            </div>
+        </div>
+       
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-12">
+            <div class="contact">
+                <h1>Information about</h1>
+                <p>99 Moo 18 Paholyothin Road,<br>
+                     Klong Nueng, Klong Luang,<br>
+                     Pathumthani 12121,<br> 
+                     Thailand.<br><br>
+                     Tel. +66 (0) 2613 3333,<br>
+                     0-2221-6171-80, 0-2221-6111-20<br></p>
+                <footer>
+                    <p>Copyright &copy; 2020 | Group_8</p>
+                </footer>
+            </div> 
+        
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function myFunction() {
+      alert("อนุมัติเรียบร้อย");
+    }
+    function nutFunction() {
+      alert("ไม่อนุมัติ");
+    }
+    </script>
