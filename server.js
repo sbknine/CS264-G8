@@ -6,6 +6,14 @@ var http = require('http'); //standard of node.js
 var PORT  = process.env.PORT || 5000; //standard of node.js
 var app = express(); //standard of node.js
 var bodyParser = require("body-parser");
+
+let idd;
+let name_thh;
+let name_enn;
+let emaill;
+let facultyy;
+let departmentt;
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -46,7 +54,21 @@ app.post("/api", async (req, res) => {
         let j = JSON.parse(temp);
         console.log(j);
         if (j.status == true) {
-            res.render("menu");
+            idd = j.username;
+            name_thh = j.displayname_th;
+            name_enn = j.displayname_en;
+            emaill = j.email;
+            facultyy = j.faculty;
+            departmentt = j.department;
+
+            res.render("menu",{
+                id : j.username,
+                name_th : j.displayname_th,
+                name_en : j.displayname_en,
+                email : j.email,
+                faculty : j.faculty,
+                department : j.department,
+            });
             //res.send("Name th: " + j.displayname_th);
         } else {
             res.render("index");
@@ -129,19 +151,54 @@ const getStudentInfo = (username) => {
     });
 };
 app.get('/menu', function (req, res) {
-    res.render('menu')
+    res.render('menu',{
+        id : idd,
+        name_th : name_thh,
+        name_en : name_enn,
+        email : emaill,
+        faculty : facultyy,
+        department : departmentt
+    })
 });
 app.get('/doc', function (req, res) {
-    res.render('doc')
+    res.render('doc',{
+        id : idd,
+        name_th : name_thh,
+        name_en : name_enn,
+        email : emaill,
+        faculty : facultyy,
+        department : departmentt
+    })
 });
 app.get('/next', function (req, res) {
-    res.render('next')
+    res.render('next',{
+        id : idd,
+        name_th : name_thh,
+        name_en : name_enn,
+        email : emaill,
+        faculty : facultyy,
+        department : departmentt
+    })
 });
 app.get('/condition', function (req, res) {
-    res.render('condition')
+    res.render('condition',{
+        id : idd,
+        name_th : name_thh,
+        name_en : name_enn,
+        email : emaill,
+        faculty : facultyy,
+        department : departmentt
+    })
 });
 app.get('/tc', function (req, res) {
-    res.render('teachercheck')
+    res.render('teachercheck',{
+        id : idd,
+        name_th : name_thh,
+        name_en : name_enn,
+        email : emaill,
+        faculty : facultyy,
+        department : departmentt
+    })
 });
 // const options = {
 //     hostname: 'jsonplaceholder.typicode.com',
