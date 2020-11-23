@@ -200,6 +200,16 @@ app.get('/tc', function (req, res) {
         department : departmentt
     })
 });
+app.get('/approve', function (req, res) {
+    res.render('appprove',{
+        id : idd,
+        name_th : name_thh,
+        name_en : name_enn,
+        email : emaill,
+        faculty : facultyy,
+        department : departmentt
+    })
+});
 // const options = {
 //     hostname: 'jsonplaceholder.typicode.com',
 //     path: '/posts/1/comments',
