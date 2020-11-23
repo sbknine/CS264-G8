@@ -101,7 +101,7 @@
                     <a href="/menu">Home</a>
                 </li>
                 <li>
-                    <a href="/doc">ยื่นคำร้อง</a>
+                    <a href="/condition">ยื่นคำร้อง</a>
                 </li>
                 <li>
                     <a href="#">สถานะคำร้อง</a>
@@ -117,7 +117,7 @@
     <script>
         function logoutFunction() {
           var txt;
-          if (confirm("Press a button!")) {
+          if (confirm("ต้องการออกจากระบบใช่หรือไม่")) {
             txt = "You pressed OK!";
           } else {
             txt = "You pressed Cancel!";
@@ -143,7 +143,7 @@
                 <p>คณะ <input type = "text" name = "faculty" size = "20" maxlength = "10" required>
                 สาขา <input type = "text" name = "branch" size = "20" maxlength = "10" required> </p>
                 <p>เอกสารรับรอง(เหตุผลที่ลงทะเบียนล่าช้า) <label>Browse</label><input type = "file" id = "img" accept ="image/*" required ></p>
-                <a href="/menu"><button type ="submit" onclick="myFunction()" >บันทึก</button></a>   <a href="/doc"><button type = "submit">ยกเลิก</button></a>
+                <a href="/tc"><button type ="submit" onclick="myFunction()" >บันทึก</button></a>   <a href="/doc"><button type = "submit">ยกเลิก</button></a>
                 </div>
             </div>
         </div>
