@@ -136,14 +136,17 @@
                     <a href="#">สถานะคำร้อง</a>
                 </li>
                 <li>
-                    <a href="/" onclick="myFunction()">ออกจากระบบ</a>
+                    <a href="/" onclick="logout()">ออกจากระบบ</a>
+                </li>
+                <li>
+                    <a href="/approve">อนุมัติคำร้อง(สำหรับอาจารย์)</a>
                 </li>
             </ul>
         </div>
     </header>
 
     <script>
-        function myFunction() {
+        function logout() {
           var txt;
           if (confirm("ต้องการออกจากระบบใช่หรือไม่")) {
             txt = "You pressed OK!";

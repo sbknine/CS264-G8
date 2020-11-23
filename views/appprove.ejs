@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ขออนุมัติจากอาจารย์ผู้สอน</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="style_welcome.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
@@ -147,7 +147,6 @@ ul.menu li a {
         
     </div>
 
-
     <script>
         function logout() {
           var txt;
@@ -169,13 +168,19 @@ ul.menu li a {
                         <a href="#" style="color:#000; text-decoration: none;"> ตรวจสอบสถานะ</a> <br> -->
                     </div>
                     <div class="col-8">
-                   <h2> ขออนุมัติจากอาจารย์ผู้สอน</h2>
-                    แนบเอกสาร <br>
-                   
-                      เอกสารประกอบคำร้อง Browse  <input type="file" id="myfile" name="myfile" multiple><br><br>
+                   <h2> การอนุมัติคำร้องจากคณบดี</h2>
+                    ชื่อ - นามสกุล(ไทย) : <%=name_th%><br>
+                    เลขรหัสนักศึกษา : <%=id%><br>
+                    ระดับ :<br>
+                    คณะ : <%=faculty%><br>
+                    ภาษาวิชา :<br>
+                    โครงการหลักสูตร : <%=department%><br>
 
-                      <a href="/menu"><button type="submit" onclick="myFunction()">บันทึก</button></a> 
-                      <a href="/next"><button type="button">ยกเลิก</button></a>
+                   
+                      <!-- /*เอกสารประกอบคำร้อง Browse  <input type="file" id="myfile" name="myfile" multiple><br><br>*/ -->
+                        อนุมัติการลงทะเบียนล่าช้าหรือไม่<br>
+                        <a href="/menu"><button type="submit" onclick="myFunction()">อนุมัติ</button> </a>
+                        <a href="/menu"><button type="button" onclick="nutFunction()">ไม่อนุมัติ</button></a>
                    
                        
                   
@@ -217,6 +222,9 @@ ul.menu li a {
 </html>
 <script>
     function myFunction() {
-      alert("บันทึกไฟล์เรียบร้อย");
+      alert("อนุมัติเรียบร้อย");
+    }
+    function nutFunction() {
+      alert("ไม่อนุมัติ");
     }
     </script>
