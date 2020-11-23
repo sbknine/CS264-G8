@@ -72,7 +72,7 @@ const getlogin = (userName, password) => {
             'path': '/api/v1/auth/Ad/verify',
             'headers': {
                 'Content-Type': 'application/json',
-                'Application-Key': 'TUa2e215505b9e2e75472dfe964b5bf566f650b84b1892206d9c26c0669874d7cc00bdf6a7fa9e90853552b48c1cbc6a2d'
+                'Application-Key': 'TU9953cd5bd4302c35165ef40134d0ad4a36ecd7d80b66082d5d782604926bc3b35b20d8a710b9f48ba316717f904903b5'
             }
         };
         var req = https.request(options, (res) => {
@@ -105,7 +105,7 @@ const getStudentInfo = (username) => {
             headers: {
                 "Content-Type": "application/json",
                 "Application-Key":
-                    "TUa2e215505b9e2e75472dfe964b5bf566f650b84b1892206d9c26c0669874d7cc00bdf6a7fa9e90853552b48c1cbc6a2d",
+                    "TU9953cd5bd4302c35165ef40134d0ad4a36ecd7d80b66082d5d782604926bc3b35b20d8a710b9f48ba316717f904903b5",
             },
         };
         var req = https.request(options, (res) => {
