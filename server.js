@@ -17,14 +17,14 @@ app.get('/', function (req, res) {
 app.listen(PORT, function () {
     console.log(`Listening on ${PORT}`)
 });
-app.get("/info/:id", async function (req, res) {
+app.get("/info", async function (req, res) {
     var nameid = req.params.id;
     console.log(nameid);
     const data = await getStudentInfo(nameid);
     console.log(data);
     if (data) {
         let j = JSON.parse(data);
-        res.render("menu",
+        res.render("info",
             {
                 prefix: j.data.prefixname,
                 name_th: j.data.displayname_th,
@@ -49,14 +49,14 @@ app.post("/api", async (req, res) => {
             res.render("menu");
             //res.send("Name th: " + j.displayname_th);
         } else {
-            res.send('{"status":false}');
+            res.render("index");
         }
         // if (j.data.status == true) {
         //   res.send("ʶҹ�:  �ѡ�֡��")
         // } else (j.data.status)
         // req.send("ʶҹ�: ��ʶҾ")
     } else {
-        res.send('{"status":false}');
+        res.render("index");
     }
     //console.log(result);
     //res.send(JSON.stringify(temp));
@@ -139,6 +139,9 @@ app.get('/next', function (req, res) {
 });
 app.get('/condition', function (req, res) {
     res.render('condition')
+});
+app.get('/tc', function (req, res) {
+    res.render('teachercheck')
 });
 // const options = {
 //     hostname: 'jsonplaceholder.typicode.com',
