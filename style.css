@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.container {
+    position: relative;
+    height: 500px;
+    width: 350px;
+    background-image: linear-gradient(90deg,#596275);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(12, 12, 12, 0.5);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input span::before {
+    content: attr(data-placeholder);
+    position: absolute;
+}
+h2 { 
+    margin: 20px;
+    color: #c3002f;
+    font-weight: 800;
+}
+input {
+    border: none;
+    height: 30px;
+    width: 250px;
+    margin: 10px 0;
+    padding: 0 40px;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: 2s;
+    align-items: center;
+    cursor: context-menu;
+}
+.textbox {
+    color: #fff;
+    background: rgba(3, 3, 3, 0.2);
+    border: 1px solid rgba(3, 3, 3, 0.2);
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+.textbox::placeholder {
+    color: #fff;
+}
+.btn-submit {
+    color: #fff;
+    height: 30;
+    width: 1;
+    background: #c24229;
+    border: 1px solid rgba(7, 7, 7, 0.2);
+    border-radius: 100px;
+    margin-bottom: 0px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+.textbox:hover,
+.textbox:focus {
+    background: #EAB543;
+    box-shadow: 1px solid 0px 0px 5px rgba(0,0,0,0.1);
+}
+.btn-submit:hover,
+.btn-submit:after {
+    background: #182C61;
+    box-shadow: 1px solid 0px 0px 5px rgba(0,0,0,0.1);
+}
